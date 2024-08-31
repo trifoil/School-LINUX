@@ -34,6 +34,20 @@
 
 * Console vs terminal
     ```
-    Console = ensemble ecran clavier souris
-    
+    Console = ensemble ecran clavier souris directement connecté
+    Terminal = ensemble ecran clavier souris par l'intermédiaire d'un réseau
     ```
+
+* Commandes de base
+    ```
+    ls
+    man
+    -help
+    cd
+    touch
+    lmkdir
+    rm
+    cp
+    ```
+
+* 
