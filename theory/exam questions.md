@@ -104,8 +104,6 @@
 
 * principales ressource à surveiller
 
-* avantages à gérer son systeme de fichier
-
 * pas les commandes pour gérer le cpu
 
 * cekoi le noyau linux 
