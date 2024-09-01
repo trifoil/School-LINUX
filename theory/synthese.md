@@ -146,4 +146,136 @@
     * Special files -> b,c,p,s
 
 * Liens
+    * Si on edite le lien, on a acces au fichier vers lequel il pointe
+    * Liens durs            
+    Les données du fichier ne sont supprimées que si tous les liens durs ont été effacés            
+    ln /tmp/fichier1 /home/fichiercible                   
+    Pour connaitre l'INODE              
+    ls -i /tmp/fichier1
+    * Liens symboliques             
+    ls -s /tmp/fichier1 /home/fichiercible 
+
+* Droits
+    * Utilisateurs :            
+    u, g, o
+    * Droits :          
+    r, w, x, - si pas de droit
+
+    ls -l
+
+    * Methode symbolique            
+    chmod ug+x fichier          
+    user et group can execute
+    * MEthode absolue
+    chmod 754 fichier                      
+
+    r = 4       
+    w = 2           
+    x = 1           
+* Umask
+    * ugo par defaut
+    * Pour un fichier, les droits sont calculés comme 666-umask (pcq rw pour tt le monde de base)
+    * Pour un directory, 777-umask (pcq rwx pour tt le monde de base)
+
+* Attention, les droits d'endossement d'utilisateur n'existent pas sur les dossiers             
+    Droits d'endossement = obtenir les droits du groupe ou user propriétaire du fichier             
+
+    Ne fonctionne pas pour les directories, les droits deviennent ceux du groupe propriétaire du dir            
+
+    chmod 4755 prog1.sh     (SUID set user id)
+    chmod 2755 prog2.sh     (SGID)
+
+* Risques liés aux droits d'endossement
+
+    donne le droit d'accès à  une commande <> categorie d'utilisateurs
+
+* Changer les options de montage pour contrer
+
+    noexec
+
+* Sticky bit
+
+    Seul l'owner peut virer le fichier du directory auqel il appartient (ex du dossier temp)    
+    chmod 1755 prog1.sh     (sticky bit)
+
+* Utilisateur physique / logique
+
+    Compte physique = utilisateur et mdp
+
+    Comptes logiques = speciaux et utilisés par des applications (aussi presents dans /etc/passwd)
+
+* Groupes
+
+    regroupement d'utilisateurs qui partagent les mêmes permissions sur un ensemble de fichiers (exécutables ou non) et répertoires.
+
+    id 
+
+    pour connaitre l'UID de l'utilisateur
+
+* upg       
+
+    User private group
+
+* risque de securité
+
+    reserver le compte root pour les taches d'admin, etc...
+
+* Authentification - mdp - infos utilisateurs
+
+    /etc/passwd
+    /etc/shadow
+
+* bon mdp blablabla
+
+* Filesystem 
+
+    facon de structurer les donnees sur un support de stockage
+
+* Disque du, plateaux, etc
+
+    Plateau piste secteur
+
+* ext
+
+    structure en groupes de blocs ayant une adresse physique
+
+    + bloc d'amorcage 1024B
+
+    + groupes 
+
+        + superbloc
+        + liste de description des groupes de blocs
+        + carte de blocs
+        + carte d'inodes
+        + table d'inodes
+        + blocs de données
+
+* Inodes
+
+    Contiennent toutes les données qui décrivent un fichier (sauf le nom)
+
+    dir = contient noms de fichiers et numero d'inode qui correspond
+
+* pq gérer soi meme un système de fichiers
+
+    Limiter la casse
+    
+    perfs ++
+
+    cloisonnement pour les utilisateurs/apps
+
+    backup
+
+* fichiers journalisés 
+
+    journal mis en cache pour les données en cours d'utilisation
+
+    Si arrêt, only check le journal de cache
+
+* Archivage
+
+    plusieurs fichiers dans une archive
+
+* Sauvegardes
+
     
