@@ -429,14 +429,14 @@
 
 * monolithique ou modulaire
 
-    * monolithique contient tt les pilotess et n'accepte pas de modules
+    * monolithique contient tt les pilotes et n'accepte pas de modules
 
     * sinon,
         * integre au noyau
         * compilé
         * non-compilé
 
-* lvm 
+* lvm
 
     couche logicielle entre systeme de fichiers et partitions
 
