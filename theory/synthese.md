@@ -278,4 +278,195 @@
 
 * Sauvegardes
 
-    
+    tar
+
+    cpio
+
+    dd
+
+    dump, restore
+
+
+* Plan de sauvegarde
+
+    F³
+
+* tar
+
+    tar options cible source
+
+    c pour create
+
+    z pour compresser
+
+    f chaine suivnte est le nom cible
+
+    cvzf 
+
+    xvf
+
+    tvf 
+
+* types de stockage
+
+    * bande mag
+    * HDD
+    * SSD
+    * optique
+    * SAN, NAS
+    * Disquette
+    * autres
+    * mflash
+
+* programmes
+
+    * package
+    * compiler
+
+* Package
+
+    Ensemble de fichiers (precompilés)
+
+    rpm -ivh
+
+    rpm -e
+
+    rpm -Uvh
+
+* Compil 
+
+    ./configure
+
+    make
+
+* processus
+
+    table de processus 
+
+
+    * PID (process identification)
+    * PPID
+    * UID
+    * GID
+    * temps CPU
+
+* ppid
+
+    parent donne à l'enfant son n° de process pour pouvoir l'identifier
+
+* modes d'execution 
+
+    * foreground
+    * bacground
+    * détaché (pas besoin de shell)
+    * daemon
+
+* heritage des process
+
+    * heritage du dossier courant
+    * var d'envi
+    * umask
+    * ulimit
+
+* conditions pour envoyer un proc en arrière plan
+
+    * pas besoin de saisies clavier
+    * pas de retour ecran
+    * process parent non arrêté
+
+* Signal 
+    * machin qui veut dire qqch pour un process
+
+    genre kill
+
+* Priorité des process
+
+    no de priorité
+
+    nice 
+
+    renice
+
+* crontab
+
+    planifiacteur de tâches
+
+* quotas types limite douce dure periode de grace comment les activer 
+
+    * n max de fichiers (inodes)
+    * taille max occupée
+
+    pour un user ou group
+
+    grpquota ou userquota
+
+    mount ou /etc/fstab
+
+    * lim douce warning à chaque nouvelle alloc de fichier ou bloc
+    * lim dure, imposs de créer
+
+* principales ressources à surveiller
+
+    * cpu
+    * ram
+    * i/o
+
+* noyau 
+
+    = kernel linux 
+
+    * taches de base
+    * gestion mem
+    * gestion process 
+    * gestion des fs
+    * gestion i/O
+    * gestion espace utilisateur
+
+* os 
+
+    permet d'utiliser un ordi et ses perph à travers des logiciels
+
+
+* monolithique ou modulaire
+
+    * monolithique contient tt les pilotess et n'accepte pas de modules
+
+    * sinon,
+        * integre au noyau
+        * compilé
+        * non-compilé
+
+* lvm 
+
+    couche logicielle entre systeme de fichiers et partitions
+
+    * flexible 
+    * redim
+    * gestion par groupes
+    * snapshots
+    * RAID
+
+    * doivent etre mis en place des la creation de la partition
+    * s'occupent juste des partitions pas du FS
+    * vol reparti sur plusieurs disques
+    * plus complique
+    * bootloader pas cap de demarrer sur lvm
+
+
+* comment marche le démarrage de linux (phases)
+
+    * mise sous tension
+    * bootloader (bios)
+    * loader (GRUB)
+    * noyau chargé
+    * gestionnaire de services (init/systemd)
+
+* Grub
+
+    * grand unified bootloader
+    * choix du systeme à démarrer
+
+* systemd 
+
+    * lance toutes les tâches de l'os
+
